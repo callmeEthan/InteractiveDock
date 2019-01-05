@@ -12,7 +12,7 @@ This is pretty much just a dock, the animation will cost a percentage of perform
 ## Installation
 Require rainmeter 4+ and windows 10.  
 Download rainmeter at https://www.rainmeter.net/.  
-Download and install [skin file](https://github.com/callmeEthan/InteractiveDock/raw/master/elegant_launcher_v1_1_for_rainmeter.rmskin)
+Download and install [skin file](https://github.com/callmeEthan/InteractiveDock/raw/master/interactive_dock_for_rainmeter.rmskin)
 
 ## Usage
 * Right click anywhere and choose toggle edit to switch to edit mode
