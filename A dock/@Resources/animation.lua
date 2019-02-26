@@ -221,3 +221,41 @@ function remove_icon()
 	SKIN:Bang("!WriteKeyValue", "Variables", 'TotalGame', count-1, "#@#Applist.inc")
 	SKIN:Bang("!Refresh")
 end
+
+function MouseAction( Target )
+	if hideicon == 1 then
+		if Target == 1 then
+			SKIN:Bang( "!CommandMeasure", "Animation", "Stop 3" )
+			SKIN:Bang( "!CommandMeasure", "Animation", "Execute 3" )
+
+			if vertical == 1 then
+				SKIN:Bang( "!SetOption", "Background", "W", skinwidth )
+				SKIN:Bang( "!SetOption", "Background", "X", 0 )
+			else
+				SKIN:Bang( "!SetOption", "Background", "H", skinheight )
+				SKIN:Bang( "!SetOption", "Background", "Y", 0 )
+			end
+
+			SKIN:Bang( "!UpdateMeter", "Background" )
+
+		else
+			SKIN:Bang( "!CommandMeasure", "Animation", "Stop 2" )
+			SKIN:Bang( "!CommandMeasure", "Animation", "Execute 2" )
+
+			if vertical == 1 then
+				SKIN:Bang( "!SetOption", "Background", "W", 2 )
+				SKIN:Bang( "!SetOption", "Background", "X", skinwidth - 2 )
+			else
+				SKIN:Bang( "!SetOption", "Background", "H", 2 )
+				SKIN:Bang( "!SetOption", "Background", "Y", skinheight - 2 )
+			end
+
+			SKIN:Bang( "!UpdateMeter", "Background" )
+		end
+	end
+
+
+	highlight( 0 )
+	SKIN:Bang( "!CommandMeasure", "Animation", "Stop 6" )
+	SKIN:Bang( "!CommandMeasure", "Animation", "Execute 6" )
+end
